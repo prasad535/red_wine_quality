@@ -1,17 +1,17 @@
 import os
-from box.exception import BoxValueError
+from box.exceptions import BoxValueError
 import yaml
 from wine_quality import logger
 import json
 import joblib
-from ensure import ensure_annotation
+from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
 from typing import Any
 
 
 
-@ensure_annotation
+@ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """reads yaml file and returns
 
@@ -36,7 +36,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         raise e
     
     
-@ensure_annotation
+@ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
     """create list of directories
 
@@ -50,7 +50,7 @@ def create_directories(path_to_directories: list, verbose=True):
             logger.info(f"created directory at: {path}")
             
 
-@ensure_annotation
+@ensure_annotations
 def save_json(path: Path, data: dict):
     """save json data
 
@@ -64,7 +64,7 @@ def save_json(path: Path, data: dict):
     logger.info(f"json file save at: {path}")
     
 
-@ensure_annotation
+@ensure_annotations
 def load_json(path: Path) -> ConfigBox:
     """load json files data
 
