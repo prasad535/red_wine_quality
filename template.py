@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import logging
 
-## Test
+## Te
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] - %(message)s')
 
