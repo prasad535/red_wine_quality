@@ -2,6 +2,8 @@ import os
 from pathlib import Path
 import logging
 
+## Test
+
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] - %(message)s')
 
 project_name = "wine_quality"
